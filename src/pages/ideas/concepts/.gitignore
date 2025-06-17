@@ -1,0 +1,121 @@
+# ----------------------------------------
+# Webots‐specific generated files & folders
+# ----------------------------------------
+
+# World state / checkpoint files
+*.wbo
+*.wbt.~*            # temporary world backups
+*.wbo.~*
+
+# Simulation logs and recordings
+*.log
+*.txt               # common for console output logs
+*.mp4
+*.avi
+*.png               # screenshots
+*.tmp               # temporary simulation files
+
+# Cache / state directories (if ever created)
+.cache/
+.cache_webots/
+.history/
+
+# ----------------------------------------
+# Controller build artifacts (C/C++)
+# ----------------------------------------
+
+# CMake and build directories under controllers/
+controllers/**/CMakeFiles/
+controllers/**/CMakeCache.txt
+controllers/**/cmake_install.cmake
+controllers/**/Makefile
+controllers/**/compile_commands.json
+controllers/**/cmake-build-*/
+controllers/**/build/
+controllers/**/lib*              # compiled libraries or shared objects
+controllers/**/*.o
+controllers/**/*.obj
+controllers/**/*.so
+controllers/**/*.dll
+controllers/**/*.exe
+
+# ----------------------------------------
+# Controller build artifacts (Java)
+# ----------------------------------------
+
+controllers/**/bin/
+controllers/**/out/
+controllers/**/*.class
+controllers/**/*.jar
+
+# ----------------------------------------
+# Controller build artifacts (Python)
+# ----------------------------------------
+
+controllers/**/__pycache__/
+controllers/**/*.pyc
+
+# ----------------------------------------
+# ROS / ROS2 integration (if any)
+# ----------------------------------------
+
+# catkin / ament build folders
+devel/
+build/
+install/
+
+# ----------------------------------------
+# Common IDE / editor configs & backups
+# ----------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Vim / Emacs / Nano swap files
+*~
+*.swp
+*.swo
+*.bak
+
+# Visual Studio / Visual Studio Code
+*.user
+*.suo
+.vscode/
+*.code-workspace
+
+# JetBrains (CLion, IntelliJ, PyCharm, etc.)
+.idea/
+*.iml
+
+# ----------------------------------------
+# Package management / lock files
+# ----------------------------------------
+
+# If you use npm/node for any tooling
+node_modules/
+npm-debug.log*
+
+# If you use python virtual environments
+venv/
+.env/
+env/
+
+# ----------------------------------------
+# Miscellaneous
+# ----------------------------------------
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+.cache/
+
+# End of .gitignore
