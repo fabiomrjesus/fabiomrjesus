@@ -4,6 +4,7 @@ import docker from '../assets/Docker.svg'
 import python from '../assets/Python.svg'
 import react from '../assets/React.svg'
 import solidity from '../assets/Solidity.svg'
+import face from '../assets/face.png'
 
 export function MainPage(){
     return <>

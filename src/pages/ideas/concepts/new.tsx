@@ -1,68 +1,15 @@
-import { Heading, Image, VStack, Text, type StackProps, HStack, InputGroup, Input, Field, type InputProps, Textarea, type TextareaProps, type HeadingProps, Box, type SelectRootProps, Button, Spacer } from "@chakra-ui/react";
+import { Heading, Image, VStack, Text, type StackProps, HStack, Input, Field, type InputProps, Textarea, type TextareaProps, type HeadingProps, type SelectRootProps } from "@chakra-ui/react";
 import { newConceptRoute } from "../../../routes/work/ideasRoutes";
-import { useEffect, useState, type ChangeEvent } from "react";
+import { useState } from "react";
 import type { AppRoute } from "../../../models/route";
-import { useAppDispatch, useAppSelector } from '../../../hooks';
-import {
-  fetchCompanies,
-} from "../../../store/slices/work/companiesSlice";
 import type { Company } from "../../../models/work/company";
 import { Portal, Select, createListCollection } from "@chakra-ui/react"
 
 export function NewConceptPage()
 {
-    const dispatch = useAppDispatch();
-    const [name, setName] = useState("");
-    const [description, setDescription] = useState("");
-    const [examples, setExamples] = useState("");
-    const [useCases, setUseCases] = useState("");
-    const [company, setCompany] = useState<string>("");
 
-    const companies = useAppSelector((state) => state.companies.entities);
-    const status = useAppSelector((state) => state.companies.status);
-    const error = useAppSelector((state) => state.companies.error);
-
-    useEffect(() => {
-        if (status === 'idle') {
-        dispatch(fetchCompanies());
-        }
-    }, [status, dispatch]);
-
-    function updateName(event: ChangeEvent<HTMLInputElement>): void {
-        setName(event.target.value);
-    }
-
-    function updateDescription(event: ChangeEvent<HTMLTextAreaElement>): void {
-        setDescription(event.target.value); 
-    }
-
-    function updateExamples(event: ChangeEvent<HTMLTextAreaElement>): void {
-        setExamples(event.target.value); 
-    }
-    
-    function updateUseCases(event: ChangeEvent<HTMLTextAreaElement>): void {
-        setUseCases(event.target.value); 
-    }
-
-    const companiesList = Object.values(companies);
     return <>
-        <PageWrapper gap="2em">
-            <PageHeading route={newConceptRoute}/>
-            <VStack gap="1em" maxW="85%" w="100%">
-                <NameField value={name} onChange={updateName}/>
-                <CompanySelectField value={company} companies={companiesList} onValChange={e => setCompany(e)} />
-                <DescriptionField value={description} onChange={updateDescription}/>
-                <TextAreaField rows={8} label="Examples" value={examples} onChange={updateExamples}/>
-                <TextAreaField rows={8} label="Use Cases" value={useCases} onChange={updateUseCases}/>
-            </VStack>
-            <HStack w="100%" h="2em">
-              <Spacer/>
-              <Button>Submit</Button>
-              <Button>Improve</Button>
-            </HStack>            
-
-        </PageWrapper>
-
+    
     </>
 }
 

@@ -2,7 +2,7 @@ import './App.css'
 import { renderRoutes } from './routes/routes'
 import { mainRoute } from './routes/main'
 import { BrowserRouter } from 'react-router-dom'
-import { Box, Heading, VStack } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 function App() {
 
